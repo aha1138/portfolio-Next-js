@@ -1,0 +1,53 @@
+.anchor-nav {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--nav-bg);
+  padding: 1rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.anchor-nav a {
+  color: var(--text-primary);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.anchor-nav a:hover {
+  opacity: 1;
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+.anchor-nav a[data-title]:hover:after {
+  content: attr(data-title);
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--nav-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.nav-divider {
+  width: 24px;
+  height: 1px;
+  background: var(--text-secondary);
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .anchor-nav {
+    display: none;
+  }
+}
