@@ -41,7 +41,7 @@ export default function Home(): JSX.Element {
               transition={animationConfig}
               className="space-y-1">
               <h1 className="text-4xl font-bold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">
-                Hello, I'm Ahad!
+                Hello, I&apos;m Ahad!
               </h1>
               <p className="text-gray-600 dark:text-gray-400">Software Developer</p>
               <p className="text-gray-600 dark:text-gray-400">Montreal, Quebec</p>
