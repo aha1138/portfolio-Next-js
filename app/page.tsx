@@ -4,7 +4,6 @@ import Image from "next/image";
 import pp from "../public/pp.jpg";
 import ThemeToggle from "../components/ui/theme-toggle";
 import { motion } from "framer-motion";
-import { JSX } from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -12,7 +11,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import image1 from "../public/1.png";
 
 
-export default function Home(): JSX.Element {
+export default function Home() {
   const animationConfig = {
     duration: 0.8,
     ease: "easeOut"
@@ -52,7 +51,7 @@ export default function Home(): JSX.Element {
               animate={{ opacity: 1, x: 0 }}
               transition={animationConfig}
               className="space-y-3">
-              <h2 className="text-lg font-semibold"> Text about me</h2>
+              <h2 className="text-lg font-semibold"> </h2>
               <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">
                 <span className="text-black dark:text-white">AWS</span> and {` `}
                 <span className="text-black dark:text-white">Azure</span>.
@@ -60,7 +59,9 @@ export default function Home(): JSX.Element {
                 <span className="text-black dark:text-white">React, python</span>
               </p>
               <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">
-                Beyond technical architecture and development, I am passionate about learning etc.
+                Développeur logiciel bilingue (anglais/français)
+                et compétent, avec plus de deux ans d'expérience en codage, développement et mise en œuvre
+                d'applications et d'outils logiciels. Basé à Montréal, QC, Canada, et ouvert à la relocalisation !
               </p>
 
             </motion.div>
@@ -74,17 +75,18 @@ export default function Home(): JSX.Element {
                 Resume
               </Button>
 
-              <Link href="https://github.com/yourusername" className="text-gray-600 dark:text-gray-400 hover:scale-110 transition-transform">
+              <Link href="https://github.com/aha1138" className="text-gray-600 dark:text-gray-400 hover:scale-110 transition-transform">
                 <FaGithub className="w-6 h-6" />
               </Link>
 
-              <Link href="https://linkedin.com/in/yourusername" className="text-gray-600 dark:text-gray-400 hover:scale-110 transition-transform">
+              <Link href="https://www.linkedin.com/in/ahad-gujar-97b714245" className="text-gray-600 dark:text-gray-400 hover:scale-110 transition-transform">
                 <FaLinkedin className="w-6 h-6" />
               </Link>
             </motion.div>
           </section>
 
           {/* Experience Section */}
+          {/* 
           <motion.section
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -96,11 +98,8 @@ export default function Home(): JSX.Element {
             <div className="space-y-2">
               <div className="flex items-center justfiy-between">
                 <div className="space-y-1">
-                  {/* Date */}
                   <p className="text-sm text-gray-600 dark:text-gray-400">July, 2024-October, 2024</p>
-                  {/* Title */}
                   <p className="font-medium">Backend Developement</p>
-                  {/* Company */}
                   <p className="text-blue-600 dark:text-blue-400">Company x</p>
                 </div>
               </div>
@@ -111,11 +110,8 @@ export default function Home(): JSX.Element {
             <div className="space-y-2">
               <div className="flex items-center justfiy-between">
                 <div className="space-y-1">
-                  {/* Date */}
                   <p className="text-sm text-gray-600 dark:text-gray-400">July, 2024-October, 2024</p>
-                  {/* Title */}
                   <p className="font-medium">Backend Developement</p>
-                  {/* Company */}
                   <p className="text-blue-600 dark:text-blue-400">Company x</p>
                 </div>
               </div>
@@ -126,11 +122,8 @@ export default function Home(): JSX.Element {
             <div className="space-y-2">
               <div className="flex items-center justfiy-between">
                 <div className="space-y-1">
-                  {/* Date */}
                   <p className="text-sm text-gray-600 dark:text-gray-400">July, 2024-October, 2024</p>
-                  {/* Title */}
                   <p className="font-medium">Backend Developement</p>
-                  {/* Company */}
                   <p className="text-blue-600 dark:text-blue-400">Company x</p>
                 </div>
               </div>
@@ -139,7 +132,8 @@ export default function Home(): JSX.Element {
               </p>
             </div>
           </motion.section>
-
+          */}
+          {/* Experience Section END */}
 
           <motion.section
             initial={{ opacity: 0, y: 100 }}
@@ -163,6 +157,7 @@ export default function Home(): JSX.Element {
             </div>
           </motion.section>
 
+          {/* PROJECTS */}
           <motion.section
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -174,7 +169,7 @@ export default function Home(): JSX.Element {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
 
-              <Card className="bg-gray-50 dark:bg-zin-900 border-gray-200
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200
               dark:border-zinc-800 transition-transform duration-300 hover:scale-105
               cursor-pointer">
                 <CardContent className="p-4">
@@ -191,8 +186,7 @@ export default function Home(): JSX.Element {
                 </CardContent>
               </Card>
 
-              
-              <Card className="bg-gray-50 dark:bg-zin-900 border-gray-200
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200
               dark:border-zinc-800 transition-transform duration-300 hover:scale-105
               cursor-pointer">
                 <CardContent className="p-4">
@@ -209,8 +203,7 @@ export default function Home(): JSX.Element {
                 </CardContent>
               </Card>
 
-              
-              <Card className="bg-gray-50 dark:bg-zin-900 border-gray-200
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200
               dark:border-zinc-800 transition-transform duration-300 hover:scale-105
               cursor-pointer">
                 <CardContent className="p-4">
