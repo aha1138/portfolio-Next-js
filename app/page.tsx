@@ -9,7 +9,11 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 import image1 from "../public/1.png";
-
+import gif from "../public/portfolio.gif";
+import nlp from "../public/nlp.png";
+import chalet from "../public/chalet.png";
+import festify from "../public/festify.png";
+import restalo from "../public/restalo.png"
 
 export default function Home() {
   const animationConfig = {
@@ -51,19 +55,19 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={animationConfig}
               className="space-y-3">
-              <h2 className="text-lg font-semibold"> </h2>
+              <h2 className="text-lg font-semibold">Specialization and Stack</h2>
               <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">
-                <span className="text-black dark:text-white">AWS</span> and {` `}
-                <span className="text-black dark:text-white">Azure</span>.
-                I specialize in building web applications and cloud infrastructure in{" "}
-                <span className="text-black dark:text-white">React, python</span>
+                I specialize in building web applications and software solutions using{" "}
+                <span className="text-black dark:text-white">Java, Python, Javascript</span>.
               </p>
               <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">
                 Développeur logiciel bilingue (anglais/français)
                 et compétent, avec plus de deux ans d'expérience en codage, développement et mise en œuvre
                 d'applications et d'outils logiciels. Basé à Montréal, QC, Canada, et ouvert à la relocalisation !
               </p>
-
+              <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">
+                I have experience with a variety of technologies including <span className="text-black dark:text-white">Java, Python, React, Vue.js, Next.js</span>.
+              </p>
             </motion.div>
 
             <motion.div
@@ -141,19 +145,22 @@ export default function Home() {
             transition={animationConfig}
             className="space-y-8">
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600
-              via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Education</h2>
+    via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Education</h2>
 
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
-                  {/* date */}
-                  <p className="text-sm text-gray-600 dark:text-gray-400 text-sm"></p>
-                  {/*  */}
-                  <p className="font-medium">Computer Science</p>
-                  <p className="text-blue-600 dark:text-blue-400">Class name</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Expected Graduation: 2025</p>
+                  <p className="font-medium">Bachelor of Applied Sciences, Computer Science</p>
+                  <p className="text-blue-600 dark:text-blue-400">Laval University, Quebec, Canada</p>
                 </div>
               </div>
-              <p className="text-gray-600 dark:text-gray-400">Text that describes the class taken</p>
+              <p className="text-gray-600 dark:text-gray-400">Courses:</p>
+              <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400">
+                <li>Software Quality and Metrics: In this class, learned solid principles, software architecture, TDD, etc.</li>
+                <li>Software Engineering Process: In this class, learning Scrum, Agile, DevOps, Clean Code principles.</li>
+                <li>Advanced Technique In Artificial Intelligence: In this class, learning AI concepts like reinforcement learning and much more.</li>
+              </ul>
             </div>
           </motion.section>
 
@@ -165,57 +172,69 @@ export default function Home() {
             className="space-y-8">
 
             <h2 className="text-3xl font-semibold bg-gradient-to-r from-rose-600
-              via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Projects</h2>
+    via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Projects</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
 
-              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200
-              dark:border-zinc-800 transition-transform duration-300 hover:scale-105
-              cursor-pointer">
-                <CardContent className="p-4">
-                  <Image src={image1} alt="Project 1" className="rounded-lg mb-4" />
-                  <div className="flex items-center justify-between">
+            <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-800 transition-transform duration-300 hover:scale-105 cursor-pointer">
+            <CardContent className="p-4">
+              <Image src={gif} alt="Project 1" className="rounded-lg mb-4" />
+              <div className="space-y-1">
+                <h3 className="font-medium">Portfolio Website</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Next.js, Typescript</p>
+                <Button variant="ghost" size="icon">→</Button>
+              </div>
+            </CardContent>
+          </Card>
 
-                    {/* Project Stack */}
-                    <div>
-                      <h3 className="font-medium"> Project 1</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400"> Next.js, TypeScript</p>
-                    </div>
-                    <Button variant="ghost" size="icon"></Button>
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200
+    dark:border-zinc-800 transition-transform duration-300 hover:scale-105
+    cursor-pointer">
+                <CardContent className="p-4">
+                  <Image src={festify} alt="Project 1" className="rounded-lg mb-4" />
+                  <div className="space-y-1">
+                    <h3 className="font-medium">FestifyPro</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Java, SQLite</p>
+                    <Button variant="ghost" size="icon">→</Button>
                   </div>
                 </CardContent>
               </Card>
 
               <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200
-              dark:border-zinc-800 transition-transform duration-300 hover:scale-105
-              cursor-pointer">
+    dark:border-zinc-800 transition-transform duration-300 hover:scale-105
+    cursor-pointer">
                 <CardContent className="p-4">
-                  <Image src={image1} alt="Project 1" className="rounded-lg mb-4" />
-                  <div className="flex items-center justify-between">
-
-                    {/* Project Stack */}
-                    <div>
-                      <h3 className="font-medium"> Project 1</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400"> Next.js, TypeScript</p>
-                    </div>
-                    <Button variant="ghost" size="icon"></Button>
+                  <Image src={nlp} alt="Project 1" className="rounded-lg mb-4" />
+                  <div className="space-y-1">
+                    <h3 className="font-medium">NLP Classification</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Jupyter Notebook</p>
+                    <Button variant="ghost" size="icon">→</Button>
                   </div>
                 </CardContent>
               </Card>
 
               <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200
-              dark:border-zinc-800 transition-transform duration-300 hover:scale-105
-              cursor-pointer">
+    dark:border-zinc-800 transition-transform duration-300 hover:scale-105
+    cursor-pointer">
                 <CardContent className="p-4">
-                  <Image src={image1} alt="Project 1" className="rounded-lg mb-4" />
-                  <div className="flex items-center justify-between">
+                  <Image src={restalo} alt="Project 1" className="rounded-lg mb-4" />
+                  <div className="space-y-1">
+                    <h3 className="font-medium">RESTALO</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Java, MongoDB</p>
+                    <Button variant="ghost" size="icon">→</Button>
+                  </div>
+                </CardContent>
+              </Card>
 
-                    {/* Project Stack */}
-                    <div>
-                      <h3 className="font-medium"> Project 1</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400"> Next.js, TypeScript</p>
-                    </div>
-                    <Button variant="ghost" size="icon"></Button>
+              <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200
+    dark:border-zinc-800 transition-transform duration-300 hover:scale-105
+    cursor-pointer">
+                <CardContent className="p-4">
+                  <Image src={chalet} alt="Project 1" className="rounded-lg mb-4" />
+                  <div className="space-y-1">
+                    <h3 className="font-medium">ChalCLT</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Java, Swing</p>
+                    <Button variant="ghost" size="icon">→</Button>
                   </div>
                 </CardContent>
               </Card>
