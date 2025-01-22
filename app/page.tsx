@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import pp from "../public/pp.jpg";
@@ -10,8 +10,6 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 import image1 from "../public/1.png";
-import image2 from "../public/2.png";
-import image3 from "../public/3.png";
 
 
 export default function Home(): JSX.Element {
