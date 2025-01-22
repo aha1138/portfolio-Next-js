@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
-import image1 from "../public/1.png";
 import gif from "../public/portfolio.gif";
 import nlp from "../public/nlp.png";
 import chalet from "../public/chalet.png";
@@ -61,9 +60,8 @@ export default function Home() {
                 <span className="text-black dark:text-white">Java, Python, Javascript</span>.
               </p>
               <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">
-                Développeur logiciel bilingue (anglais/français)
-                et compétent, avec plus de deux ans d'expérience en codage, développement et mise en œuvre
-                d'applications et d'outils logiciels. Basé à Montréal, QC, Canada, et ouvert à la relocalisation !
+              Bilingual (English/French) and skilled software developer with over two years of experience in coding, developing and implementing
+              software applications and tools. Based in Montreal, QC, Canada, and open to relocation!
               </p>
               <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">
                 I have experience with a variety of technologies including <span className="text-black dark:text-white">Java, Python, React, Vue.js, Next.js</span>.
@@ -75,9 +73,9 @@ export default function Home() {
               animate={{ opacity: 1, x: 0 }}
               transition={animationConfig}
               className="flex items-center gap-3">
-              <Button className="rounded-full bg-gradient-to-r from-rose-600 via-indigo-600 to-sky-500 text-white transition-transform hover:scale-105">
+              {/* <Button className="rounded-full bg-gradient-to-r from-rose-600 via-indigo-600 to-sky-500 text-white transition-transform hover:scale-105">
                 Resume
-              </Button>
+              </Button> */}
 
               <Link href="https://github.com/aha1138" className="text-gray-600 dark:text-gray-400 hover:scale-110 transition-transform">
                 <FaGithub className="w-6 h-6" />
