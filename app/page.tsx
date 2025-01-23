@@ -21,7 +21,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-gray-300 via-white to-gray-400 dark:from-black dark:via-zinc-900 dark:to-zinc-800 text-black dark:text-white transition-all duration-500">
       <div className="mx-auto max-w-xl px-4 py-20">
         <motion.header
           initial={{ opacity: 0, x: -100 }}
