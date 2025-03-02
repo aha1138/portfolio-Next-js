@@ -13,6 +13,8 @@ import festify from "../public/festify.png";
 import restalo from "../public/restalo.png";
 import InteractiveHeader from "@/components/InteractiveHeader";
 import { StaticImageData } from "next/image";
+import emailjs from '@emailjs/browser';
+import { useState, FormEvent, useRef, useEffect } from 'react';
 
 // Define the type for ProjectCard props
 interface ProjectCardProps {
@@ -28,6 +30,50 @@ export default function Home() {
   const animationConfig = {
     duration: 0.8,
     ease: "easeOut"
+  };
+  
+  useEffect(() => {
+    emailjs.init("A3dPbiyPTly8ovlbe");
+  }, []);
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  
+  // Handle input change
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+  
+  // Handle form submission
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    
+    try {
+      const result = await emailjs.sendForm(
+        'service_wo7nwa7', 
+        'template_1zprc5f',
+        formRef.current!,
+        'A3dPbiyPTly8ovlbe'
+      );
+      console.log('Success!', result.text);
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -317,44 +363,92 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent">Contact Me</h2>
             
             <div className="max-w-xl mx-auto bg-white dark:bg-zinc-800 rounded-lg shadow-lg p-8">
-              <form className="space-y-6">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="block text-gray-700 dark:text-gray-300">Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-zinc-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Your Name"
-                    required
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="email" className="block text-gray-700 dark:text-gray-300">Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-zinc-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="your.email@example.com"
-                    required
-                  />
-                </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="message" className="block text-gray-700 dark:text-gray-300">Message</label>
-                  <textarea 
-                    id="message" 
-                    rows={5}
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-zinc-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Your message"
-                    required
-                  ></textarea>
-                </div>
-                
-                <Button className="w-full bg-gradient-to-r from-rose-600 via-indigo-600 to-sky-500 text-white transition-transform hover:scale-105">
-                  Send Message
-                </Button>
-              </form>
+              {submitStatus === 'success' ? (
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-center py-8 space-y-4"
+                >
+                  <div className="flex justify-center">
+                    <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-bold">Message Sent!</h3>
+                  <p className="text-gray-600 dark:text-gray-400">Thank you for reaching out. I'll get back to you as soon as possible.</p>
+                  <Button 
+                    onClick={() => setSubmitStatus(null)}
+                    className="bg-gradient-to-r from-rose-600 via-indigo-600 to-sky-500 text-white"
+                  >
+                    Send Another Message
+                  </Button>
+                </motion.div>
+              ) : (
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="block text-gray-700 dark:text-gray-300">Name</label>
+                    <input 
+                      type="text" 
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-zinc-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="Your Name"
+                      required
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="block text-gray-700 dark:text-gray-300">Email</label>
+                    <input 
+                      type="email" 
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-zinc-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="your.email@example.com"
+                      required
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="block text-gray-700 dark:text-gray-300">Message</label>
+                    <textarea 
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={5}
+                      className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-zinc-700 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      placeholder="Your message"
+                      required
+                    ></textarea>
+                  </div>
+                  
+                  <Button 
+                    type="submit" 
+                    className="w-full bg-gradient-to-r from-rose-600 via-indigo-600 to-sky-500 text-white transition-transform hover:scale-105"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <div className="flex items-center justify-center">
+                        <div className="w-5 h-5 border-t-2 border-b-2 border-white rounded-full animate-spin mr-2"></div>
+                        Sending...
+                      </div>
+                    ) : "Send Message"}
+                  </Button>
+                  
+                  {submitStatus === 'error' && (
+                    <p className="text-red-500 text-center text-sm">
+                      Sorry, there was a problem sending your message. Please try again.
+                    </p>
+                  )}
+                </form>
+              )}
             </div>
             
             <div className="text-center text-gray-600 dark:text-gray-400 mt-8">
