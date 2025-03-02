@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Inter} from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import FloatingNavBar from '../components/FloatingNavBar';
 
 const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
-  title: "Portfolio Website",
-  description: "Portfolio Website made with Next.js",
+  title: "Ahad Gujar - Portfolio",
+  description: "Professional portfolio showcasing my skills and projects",
 };
 
 export default function RootLayout({
@@ -16,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
         className={`${inter.className} antialiased`}
       >
@@ -25,8 +26,8 @@ export default function RootLayout({
           enableSystem
           defaultTheme="system"
           >
-
           {children}
+          <FloatingNavBar />
         </ThemeProvider>
       </body>
     </html>
