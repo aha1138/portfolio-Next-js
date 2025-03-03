@@ -113,42 +113,17 @@ const portfolioData = {
       ]
     },
     {
-      title: 'SemanticAnalysis',
-      period: 'Spring 2024',
-      description: 'Implementation of a semantic analyzer for a compiler with syntax-directed translation',
-      technologies: ['C#', 'Visual Studio', 'xUnit', 'MSTest'],
-      industry: ['compiler design', 'software development', 'programming languages'],
-      highlights: [
-        'Implemented a LL(1) top-down parser for syntactic analysis',
-        'Developed a semantic analyzer based on syntax-directed translation',
-        'Created an intermediate code representation system with instructions like Assignment, Jump, and Label',
-        'Built comprehensive unit tests using xUnit and MSTest frameworks'
-      ]
-    },
-    {
-      title: 'IFTCoin Blockchain Implementation',
+      title: 'Blockchain Technologies: IFTCoin and Lamport Signatures',
       period: 'Winter 2024',
-      description: 'Development of a functional blockchain node with transaction management and block validation',
-      technologies: ['Python', 'Blockchain', 'Cryptography', 'Data Structures', 'Networking'],
-      industry: ['blockchain', 'cryptocurrency', 'distributed systems', 'fintech'],
+      description: 'Development of blockchain technologies including a functional cryptocurrency node (IFTCoin) and a hash-based digital signature system (Lamport signatures)',
+      technologies: ['Python', 'Blockchain', 'Cryptography', 'Hash Functions', 'Data Structures', 'Networking', 'Security Protocols'],
+      industry: ['blockchain', 'cryptocurrency', 'distributed systems', 'fintech', 'cryptography', 'cybersecurity', 'digital signatures'],
       highlights: [
-        'Implemented Block, Transaction, and BlockHandler classes for complete blockchain functionality',
-        'Designed transaction input/output management with cryptographic validation',
-        'Created mechanisms for maintaining and updating the blockchain in real-time',
-        'Developed comprehensive test cases ensuring data integrity throughout the transaction lifecycle'
-      ]
-    },
-    {
-      title: 'Lamport Signature Implementation',
-      period: 'Winter 2024',
-      description: 'Implementation of a hash-based digital signature system using Lamport signatures',
-      technologies: ['Python', 'Cryptography', 'Hash Functions', 'Security Protocols'],
-      industry: ['cryptography', 'cybersecurity', 'blockchain', 'digital signatures'],
-      highlights: [
-        'Developed key generation, signing, and verification functions for Lamport signatures',
-        'Implemented secure cryptographic primitives for one-time signature schemes',
-        'Created robust testing infrastructure to validate signature integrity',
-        'Optimized implementation for practical use cases in blockchain verification'
+        'Implemented a complete blockchain system with Block, Transaction, and BlockHandler classes for transaction management',
+        'Developed key generation, signing, and verification functions for Lamport one-time signature schemes',
+        'Designed secure transaction input/output management with cryptographic validation mechanisms',
+        'Created robust testing infrastructure ensuring data integrity throughout transaction and signature lifecycles',
+        'Optimized cryptographic implementations for practical blockchain verification use cases'
       ]
     }
   ],
