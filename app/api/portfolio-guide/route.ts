@@ -125,6 +125,19 @@ const portfolioData = {
         'Created robust testing infrastructure ensuring data integrity throughout transaction and signature lifecycles',
         'Optimized cryptographic implementations for practical blockchain verification use cases'
       ]
+    },
+    {
+      title: 'Portfolio Website',
+      period: 'Current',
+      description: 'A modern, responsive portfolio website built with Next.js, showcasing my projects and skills with interactive features',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'EmailJS', 'Google Gemini API'],
+      industry: ['web development', 'frontend', 'interactive design', 'personal branding'],
+      highlights: [
+        'Designed and implemented a responsive UI with dark/light mode using Tailwind CSS and Next.js',
+        'Created interactive UI elements and animations with Framer Motion for enhanced user experience',
+        'Integrated EmailJS for a functional contact form with form validation and submission feedback',
+        'Built an AI-powered portfolio guide using Google Gemini API to help visitors navigate projects based on their interests'
+      ]
     }
   ],
   education: [
