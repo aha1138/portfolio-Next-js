@@ -487,7 +487,7 @@ function ProjectCard({ image, title, description, technologies, githubUrl, liveU
           ))}
         </div>
         
-        <div className="flex gap-4 pt-2">
+        {/* <div className="flex gap-4 pt-2">
           {githubUrl && (
             <Link href={githubUrl} target="_blank" rel="noopener noreferrer" 
               className="flex items-center gap-1 text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
@@ -505,7 +505,7 @@ function ProjectCard({ image, title, description, technologies, githubUrl, liveU
               Live Demo
             </Link>
           )}
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );
