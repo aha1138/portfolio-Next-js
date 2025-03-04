@@ -138,6 +138,20 @@ const portfolioData = {
         'Integrated EmailJS for a functional contact form with form validation and submission feedback',
         'Built an AI-powered portfolio guide using Google Gemini API to help visitors navigate projects based on their interests'
       ]
+    },
+    {
+      title: 'UFood Restaurant Application',
+      period: 'Spring 2024',
+      description: 'A responsive restaurant discovery platform with search, reviews, and interactive maps',
+      technologies: ['Vue.js 3', 'Vuetify', 'Tailwind CSS', 'JWT', 'Google Maps API', 'Jest', 'RESTful API'],
+      industry: ['web development', 'food service', 'location-based services', 'social platform'],
+      highlights: [
+        'Developed a responsive restaurant discovery platform using Vue.js 3, Vuetify, and Tailwind CSS with component-based architecture',
+        'Implemented secure JWT authentication and user profile system with following, visited, and favorite restaurant features',
+        'Integrated Google Maps API to display restaurant locations with custom markers and information windows',
+        'Created a dynamic restaurant filtering system allowing users to search by name, genre, and price range',
+        'Built a comprehensive review system with rating and commenting capabilities and proper form validation'
+      ]
     }
   ],
   education: [
