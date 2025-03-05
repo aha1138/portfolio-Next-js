@@ -24,6 +24,20 @@ const portfolioData = {
       ]
     },
     {
+      title: 'Web Security Analysis with DVWA',
+      period: 'March 2025',
+      description: 'Project focused on penetration testing to identify and exploit vulnerabilities in DVWA, demonstrating cybersecurity skills',
+      technologies: ['Docker', 'OWASP ZAP', 'sqlmap', 'OWASP Top 10'],
+      industry: ['cybersecurity', 'penetration testing', 'security analysis'],
+      highlights: [
+        'Deployed DVWA via Docker for an isolated, secure test environment',
+        'Used OWASP ZAP to detect critical vulnerabilities including SQL injection and XSS',
+        'Exploited SQL injection vulnerabilities with sqlmap to extract database information',
+        'Created a professional security report with recommendations including parameterized queries',
+        'Documented testing process with screenshots of alerts and exploitation outputs'
+      ]
+    },
+    {
       title: 'Comparative Study of Small LLMs',
       period: 'Fall 2024',
       description: 'Research project comparing small language models (LLMs) with less than 4 billion parameters on various NLP tasks',
