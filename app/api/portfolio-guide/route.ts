@@ -166,6 +166,20 @@ const portfolioData = {
         'Created a dynamic restaurant filtering system allowing users to search by name, genre, and price range',
         'Built a comprehensive review system with rating and commenting capabilities and proper form validation'
       ]
+    },
+    {
+      title: 'Compiler Project',
+      period: 'Fall 2024',
+      description: 'Implemented a compiler consisting of a Lexical Analyzer and a Semantic Analyzer in C#.',
+      technologies: ['C#', 'Regular Expressions', 'Finite Automata', 'NFAs', 'DFAs', 'Parsing', 'LL Parsing', 'Semantic Analysis', 'Intermediate Code Generation'],
+      industry: ['compiler design', 'software development', 'language processing'],
+      highlights: [
+        'Implemented a complete lexical analyzer that can tokenize source code based on regular expression rules.',
+        'Implemented a semantic analyzer that can parse a token stream, perform semantic checks, and generate intermediate code.',
+        'Designed and implemented a syntax-directed translation scheme for defining the semantics of the language.',
+        'Implemented a backpatching mechanism for generating control flow instructions.',
+        'Developed a comprehensive suite of unit tests to ensure the correctness of the implementation.'
+      ]
     }
   ],
   education: [
