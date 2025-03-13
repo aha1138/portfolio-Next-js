@@ -177,10 +177,10 @@ export default function Home() {
               <div className="space-y-6">
                 <h3 className="text-2xl font-semibold">Who I Am</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  I`&apos;`m a passionate software developer based in Montreal, Quebec. I specialize in building robust web applications and software solutions using modern technologies.
+                  I&apos;m a passionate software developer based in Montreal, Quebec. I specialize in building robust web applications and software solutions using modern technologies.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400">
-                  With a strong foundation in computer science and over two years of hands-on experience, I`&apos;`ve developed a keen eye for detail and a commitment to creating efficient, scalable, and user-friendly applications.
+                  With a strong foundation in computer science and over two years of hands-on experience, I&apos;ve developed a keen eye for detail and a commitment to creating efficient, scalable, and user-friendly applications.
                 </p>
               </div>
               
@@ -363,7 +363,7 @@ export default function Home() {
                     </div>
                   </div>
                   <h3 className="text-xl font-bold">Message Sent!</h3>
-                  <p className="text-gray-600 dark:text-gray-400">Thank you for reaching out. I`&apos;`ll get back to you as soon as possible.</p>
+                  <p className="text-gray-600 dark:text-gray-400">Thank you for reaching out. I&apos;ll get back to you as soon as possible.</p>
                   <Button 
                     onClick={() => setSubmitStatus(null)}
                     className="bg-gradient-to-r from-rose-600 via-indigo-600 to-sky-500 text-white"
