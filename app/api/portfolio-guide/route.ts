@@ -76,6 +76,34 @@ const portfolioData = {
       ]
     },
     {
+      title: 'Soccer Match Prediction Analysis',
+      period: 'August 2025',
+      description: 'A machine learning project analyzing soccer match data to predict outcomes using feature engineering and Random Forest classification',
+      technologies: ['Python', 'Pandas', 'Scikit-learn', 'Jupyter Notebooks', 'Matplotlib', 'Seaborn', 'Random Forest'],
+      industry: ['sports analytics', 'machine learning', 'predictive modeling', 'data science'],
+      highlights: [
+        'Engineered temporal features using rolling averages for key performance metrics (goals, shots, distance covered)',
+        'Implemented a Random Forest Classifier achieving 60-65% prediction accuracy for match outcomes',
+        'Created comprehensive visualizations to interpret feature importance and model performance',
+        'Developed a complete data science pipeline from data loading to model evaluation',
+        'Identified key performance indicators that most strongly influence match results'
+      ]
+    },
+    {
+      title: 'Reddit Personality Traits Prediction',
+      period: 'January-April 2025',
+      description: 'A large-scale data processing project analyzing Reddit user data to predict personality traits (OCEAN model) from social media behavior',
+      technologies: ['Python', 'Pandas', 'Scikit-learn', 'Natural Language Processing', 'HuggingFace', 'Big Data', 'Machine Learning'],
+      industry: ['data science', 'computational psychology', 'social media analysis', 'predictive modeling'],
+      highlights: [
+        'Processed and analyzed massive Reddit datasets (posts from 2015-2019) with efficient data handling techniques',
+        'Implemented machine learning models to predict personality traits (Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism)',
+        'Developed feature extraction pipelines for text content, temporal patterns, and social interaction behaviors',
+        'Applied NLP techniques to derive psychological indicators from user-generated content',
+        'Created comprehensive testing and validation framework for evaluating prediction accuracy'
+      ]
+    },
+    {
       title: 'Introduction to NLP with Transformers',
       period: 'Summer 2024',
       description: 'Applied project using pre-trained transformer models from HuggingFace for various NLP tasks',
