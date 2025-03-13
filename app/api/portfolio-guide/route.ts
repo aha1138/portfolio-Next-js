@@ -54,10 +54,10 @@ const portfolioData = {
       title: 'FestifyPro',
       period: 'September-December 2024',
       description: 'Backend development for festival management with RESTful APIs',
-      technologies: ['Java', 'SQLite', 'JUnit', 'Maven', 'GitHub Actions', 'CI/CD'],
+      technologies: ['Java', 'SQLite', 'JUnit', 'Maven', 'GitHub Actions', 'CI/CD', 'Clean Architecture', 'SOLID', 'Testing', 'Restful APIs'],
       industry: ['event management', 'backend', 'api development'],
       highlights: [
-        'Designed and maintained CI/CD pipelines using GitHub Actions with 90% deployment success rate',
+        'Increased unit test coverage from 51% to 73% through systematic implementation of JUnit tests',
         'Developed scalable RESTful APIs for festival management',
         'Applied Clean Architecture principles and SOLID patterns'
       ]
@@ -107,7 +107,7 @@ const portfolioData = {
       title: 'Introduction to NLP with Transformers',
       period: 'Summer 2024',
       description: 'Applied project using pre-trained transformer models from HuggingFace for various NLP tasks',
-      technologies: ['Python', 'HuggingFace', 'Transformers', 'PyTorch', 'TensorFlow', 'NLP'],
+      technologies: ['Python', 'HuggingFace', 'Transformers', 'NLP'],
       industry: ['natural language processing', 'machine learning', 'text analysis', 'construction safety'],
       highlights: [
         'Fine-tuned transformer models for classification of construction site incident descriptions',
