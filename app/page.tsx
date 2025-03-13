@@ -246,7 +246,6 @@ export default function Home() {
                   <li>Python</li>
                   <li>Node.js</li>
                   <li>Express.js</li>
-                  <li>Spring Boot</li>
                 </ul>
               </div>
               
