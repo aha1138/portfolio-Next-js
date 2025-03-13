@@ -22,8 +22,6 @@ interface ProjectCardProps {
   title: string;
   description: string;
   technologies: string[];
-  githubUrl?: string;
-  liveUrl?: string;
 }
 
 export default function Home() {
@@ -232,7 +230,6 @@ export default function Home() {
                   <li>HTML/CSS/JavaScript</li>
                   <li>React.js</li>
                   <li>Vue.js</li>
-                  <li>Next.js</li>
                   <li>Tailwind CSS</li>
                 </ul>
               </div>
@@ -262,8 +259,8 @@ export default function Home() {
                 </div>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-400">
                   <li>MongoDB</li>
-                  <li>MySQL</li>
-                  <li>PostgreSQL</li>
+                  <li>Oracle</li>
+                  <li>PL/SQL</li>
                   <li>SQLite</li>
                 </ul>
               </div>
@@ -306,8 +303,6 @@ export default function Home() {
                 title="Portfolio Website"
                 description="A personal portfolio website built with Next.js and Tailwind CSS, featuring responsive design and dark/light modes."
                 technologies={["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"]}
-                githubUrl="https://github.com/aha1138/portfolio-Next-js"
-                liveUrl="#"
               />
               
               <ProjectCard 
@@ -315,8 +310,6 @@ export default function Home() {
                 title="FestifyPro"
                 description="A festival management application built with Java and SQLite to manage events, attendees, and performances."
                 technologies={["Java", "SQLite", "Swing"]}
-                githubUrl="#"
-                liveUrl="#"
               />
               
               <ProjectCard 
@@ -324,8 +317,6 @@ export default function Home() {
                 title="NLP Classification"
                 description="A natural language processing project for text classification using machine learning algorithms."
                 technologies={["Python", "Jupyter Notebook", "NLP", "Machine Learning"]}
-                githubUrl="#"
-                liveUrl="#"
               />
               
               <ProjectCard 
@@ -333,8 +324,6 @@ export default function Home() {
                 title="RESTALO"
                 description="A restaurant management system with reservation capabilities and menu management."
                 technologies={["Java", "MongoDB", "Spring Boot"]}
-                githubUrl="#"
-                liveUrl="#"
               />
               
               <ProjectCard 
@@ -342,8 +331,6 @@ export default function Home() {
                 title="ChalCLT"
                 description="A cabin rental management application with booking system and owner dashboard."
                 technologies={["Java", "Swing", "JDBC"]}
-                githubUrl="#"
-                liveUrl="#"
               />
             </div>
           </motion.div>
@@ -461,7 +448,7 @@ export default function Home() {
   );
 }
 
-function ProjectCard({ image, title, description, technologies, githubUrl, liveUrl }: ProjectCardProps) {
+function ProjectCard({ image, title, description, technologies }: ProjectCardProps) {
   return (
     <motion.div
       whileHover={{ y: -10 }}
@@ -485,26 +472,6 @@ function ProjectCard({ image, title, description, technologies, githubUrl, liveU
               {tech}
             </span>
           ))}
-        </div>
-        
-        <div className="flex gap-4 pt-2">
-          {githubUrl && (
-            <Link href={githubUrl} target="_blank" rel="noopener noreferrer" 
-              className="flex items-center gap-1 text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
-            >
-              <FaGithub /> Code
-            </Link>
-          )}
-          {liveUrl && (
-            <Link href={liveUrl} target="_blank" rel="noopener noreferrer" 
-              className="flex items-center gap-1 text-gray-600 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-              </svg> 
-              Live Demo
-            </Link>
-          )}
         </div>
       </div>
     </motion.div>
