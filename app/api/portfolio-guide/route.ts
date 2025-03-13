@@ -231,24 +231,32 @@ export async function POST(request: NextRequest) {
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '');
     
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-    
     const prompt = `
-      You are a helpful assistant for my portfolio website. 
-      Help guide visitors through my portfolio based on their interests or industry.
-      
-      Here's information about my skills, projects, and experience:
-      ${JSON.stringify(portfolioData)}
-      
-      Based on this visitor's query: "${query}"
-      Provide a personalized response that highlights relevant projects, skills, and experience.
-      Focus on matching their industry interests with my relevant work.
-      Keep responses professional, brief (max 200 words), and directly relevant.
-      If their query is unrelated to portfolio guidance, politely redirect them to ask about my work, skills, or projects.
-      
-      Response format: Conversational but concise text with 1-3 specific recommendations.
-    `;
+    You are a concise assistant for my portfolio website.
+    
+    Here's my portfolio data:
+    ${JSON.stringify(portfolioData)}
+    
+    For the query: "${query}"
+    Create a brief response with:
+    1. A single greeting sentence
+    2. 3-5 bullet points highlighting relevant projects and skills that match their interests
+    3. A brief closing sentence suggesting next steps
+    
+    Use this exact formatting with proper line breaks:
+    [Greeting sentence]
 
-    // Generate content with proper error handling
+    • [First bullet point]
+    • [Second bullet point]
+    • [Third bullet point]
+    (and so on if needed)
+
+    [Closing sentence]
+    
+    Ensure you include empty lines before and after the bullet points.
+    Keep total response under 150 words. If query is unrelated to my portfolio, politely redirect to ask about my relevant work.
+  `;
+
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const text = response.text();

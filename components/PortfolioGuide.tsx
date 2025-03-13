@@ -87,7 +87,7 @@ export default function PortfolioGuide() {
             onClick={() => setIsOpen(false)}
           >
             <motion.div
-              className="w-full max-w-md bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden"
+              className="w-full max-w-2xl bg-white dark:bg-gray-800 rounded-xl shadow-xl overflow-hidden"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
@@ -109,7 +109,7 @@ export default function PortfolioGuide() {
               </div>
 
               {/* Messages */}
-              <div className="p-4 h-80 overflow-y-auto bg-gray-50 dark:bg-gray-900">
+              <div className="p-4 h-96 overflow-y-auto bg-gray-50 dark:bg-gray-900">
                 {messages.map((message, index) => (
                   <div
                     key={index}
@@ -122,7 +122,7 @@ export default function PortfolioGuide() {
                         message.role === 'user'
                           ? 'bg-blue-600 text-white rounded-br-none'
                           : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-bl-none'
-                      }`}
+                      } ${message.role === 'assistant' ? 'whitespace-pre-wrap' : ''}`}
                     >
                       {message.content}
                     </div>
